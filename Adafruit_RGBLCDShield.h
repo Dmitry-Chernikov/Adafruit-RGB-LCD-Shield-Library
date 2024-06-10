@@ -170,7 +170,7 @@ public:
    * used
    * @param status Status to set the backlight
    */
-  void setBacklight(uint8_t status);
+  void setBacklight(Color status);
 
   /*!
    * @brief High-level command that creates custom characters in CGRAM
