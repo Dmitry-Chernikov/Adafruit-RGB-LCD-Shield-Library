@@ -57,6 +57,17 @@
 #define BUTTON_RIGHT 0x02  //!< Right button
 #define BUTTON_SELECT 0x01 //!< Select button
 
+enum class Color : uint8_t{
+  OFF =    0,
+  RED =    1,
+  GREEN =  2,
+  YELLOW = 3,
+  BLUE =   4,
+  VIOLET = 5,
+  TEAL =   6,
+  WHITE =  7
+};
+
 #ifdef ARDUINO_ARCH_MEGAAVR
 using namespace arduino; //!< MEGA AVR architecture uses the arduino namespace
 #endif                   //!< but AVR arch does not
