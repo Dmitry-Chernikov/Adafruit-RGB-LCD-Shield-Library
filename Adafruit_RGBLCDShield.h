@@ -57,17 +57,6 @@
 #define BUTTON_RIGHT 0x02  //!< Right button
 #define BUTTON_SELECT 0x01 //!< Select button
 
-enum class Color : uint8_t{
-  OFF =    0,
-  RED =    1,
-  GREEN =  2,
-  YELLOW = 3,
-  BLUE =   4,
-  VIOLET = 5,
-  TEAL =   6,
-  WHITE =  7
-};
-
 #ifdef ARDUINO_ARCH_MEGAAVR
 using namespace arduino; //!< MEGA AVR architecture uses the arduino namespace
 #endif                   //!< but AVR arch does not
@@ -77,6 +66,20 @@ using namespace arduino; //!< MEGA AVR architecture uses the arduino namespace
  */
 class Adafruit_RGBLCDShield : public Print {
 public:
+  /*!
+   * @brief Enum Color to specify the display backlight color.
+   */
+  enum class Color : uint8_t{
+    OFF =    0,
+    RED =    1,
+    GREEN =  2,
+    YELLOW = 3,
+    BLUE =   4,
+    VIOLET = 5,
+    TEAL =   6,
+    WHITE =  7
+  };
+
   Adafruit_RGBLCDShield();
 
   /*!
@@ -168,7 +171,15 @@ public:
   /*!
    * @brief High-level command to set the backlight, only if the LCD backpack is
    * used
-   * @param status Status to set the backlight
+   * @param status Status to set the backlight, 0x1 - 0x7
+   */
+  [[deprecated("Use Color enumeration, Color enumeration is declared in the library.")]]
+  void setBacklight(uint8_t status);
+
+  /*!
+   * @brief High-level command to set the backlight, only if the LCD backpack is
+   * used
+   * @param status Status to set the backlight, enum Color
    */
   void setBacklight(Color status);
 
