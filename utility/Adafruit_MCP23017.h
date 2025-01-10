@@ -10,9 +10,7 @@
   Written by Limor Fried/Ladyada for Adafruit Industries.
   BSD license, all text above must be included in any redistribution
  ****************************************************/
-
-#ifndef _Adafruit_MCP23017_H_
-#define _Adafruit_MCP23017_H_
+#pragma once
 
 // Don't forget the Wire library
 class Adafruit_MCP23017 {
@@ -58,5 +56,3 @@ private:
 #define MCP23017_INTCAPB 0x11
 #define MCP23017_GPIOB 0x13
 #define MCP23017_OLATB 0x15
-
-#endif
