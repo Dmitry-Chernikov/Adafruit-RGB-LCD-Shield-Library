@@ -20,6 +20,7 @@ When a button is pressed, the backlight changes color.
 Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();
 
 // These #defines make it easy to set the backlight color
+[[deprecated("Use Color enumeration, Color enumeration is declared in the library.")]]
 #define RED 0x1
 #define YELLOW 0x3
 #define GREEN 0x2
@@ -40,7 +41,7 @@ void setup() {
   lcd.print("Hello, world!");
   time = millis() - time;
   Serial.print("Took "); Serial.print(time); Serial.println(" ms");
-  lcd.setBacklight(WHITE);
+  lcd.setBacklight(Color::WHITE);
 }
 
 uint8_t i=0;
@@ -58,23 +59,23 @@ void loop() {
     lcd.setCursor(0,0);
     if (buttons & BUTTON_UP) {
       lcd.print("UP ");
-      lcd.setBacklight(RED);
+      lcd.setBacklight(Color::RED);
     }
     if (buttons & BUTTON_DOWN) {
       lcd.print("DOWN ");
-      lcd.setBacklight(YELLOW);
+      lcd.setBacklight(Color::YELLOW);
     }
     if (buttons & BUTTON_LEFT) {
       lcd.print("LEFT ");
-      lcd.setBacklight(GREEN);
+      lcd.setBacklight(Color::GREEN);
     }
     if (buttons & BUTTON_RIGHT) {
       lcd.print("RIGHT ");
-      lcd.setBacklight(TEAL);
+      lcd.setBacklight(Color::TEAL);
     }
     if (buttons & BUTTON_SELECT) {
       lcd.print("SELECT ");
-      lcd.setBacklight(VIOLET);
+      lcd.setBacklight(Color::VIOLET);
     }
   }
 }
