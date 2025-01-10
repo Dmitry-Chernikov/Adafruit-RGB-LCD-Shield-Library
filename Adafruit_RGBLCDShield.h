@@ -62,24 +62,24 @@ using namespace arduino; //!< MEGA AVR architecture uses the arduino namespace
 #endif                   //!< but AVR arch does not
 
 /*!
+ * @brief Enum Color to specify the display backlight color.
+ */
+enum class Color : uint8_t{
+  OFF =    0,
+  RED =    1,
+  GREEN =  2,
+  YELLOW = 3,
+  BLUE =   4,
+  VIOLET = 5,
+  TEAL =   6,
+  WHITE =  7
+};
+
+/*!
  * @brief Base class for RGB LCD shield
  */
 class Adafruit_RGBLCDShield : public Print {
 public:
-  /*!
-   * @brief Enum Color to specify the display backlight color.
-   */
-  enum class Color : uint8_t{
-    OFF =    0,
-    RED =    1,
-    GREEN =  2,
-    YELLOW = 3,
-    BLUE =   4,
-    VIOLET = 5,
-    TEAL =   6,
-    WHITE =  7
-  };
-
   Adafruit_RGBLCDShield();
 
   /*!
