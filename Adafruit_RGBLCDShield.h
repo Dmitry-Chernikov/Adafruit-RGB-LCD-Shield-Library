@@ -1,9 +1,7 @@
 /*!
  * @file Adafruit_RGBLCDShield.h
  */
-
-#ifndef Adafruit_RGBLCDShield_h
-#define Adafruit_RGBLCDShield_h
+#pragma once
 
 #include "Print.h"
 #include <inttypes.h>
@@ -239,5 +237,3 @@ private:
   uint8_t _i2cAddr;
   Adafruit_MCP23017 _i2c;
 };
-
-#endif
