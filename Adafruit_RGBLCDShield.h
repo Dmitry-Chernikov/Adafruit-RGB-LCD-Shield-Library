@@ -62,7 +62,7 @@ using namespace arduino; //!< MEGA AVR architecture uses the arduino namespace
 /*!
  * @brief Enum Color to specify the display backlight color.
  */
-enum class Color : uint8_t{
+enum Color : uint8_t{
   OFF =    0x0,
   RED =    0x1,
   GREEN =  0x2,
