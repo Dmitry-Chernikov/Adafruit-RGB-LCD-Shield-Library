@@ -336,7 +336,6 @@ void Adafruit_RGBLCDShield::_digitalWrite(uint8_t p, uint8_t d) {
   }
 }
 
-
 // Allows to set the backlight, if the LCD backpack is used, type uint8_t
 void Adafruit_RGBLCDShield::setBacklight(uint8_t status) {
   // check if i2c or SPI
